@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			body{
+				background-image:url("lnx.png") ;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function thing(x){
+				x.style.background="pink";
+			}
+			function thimg(){
+				var id=document.getElementById("mytext").value;
+				var d=confirm("你写了什么");
+				if(d==true){
+					var c=confirm("你确定?");
+					if(c==true){
+						alert("看来你真的很喜欢"+id);
+					}
+				}
+				else{
+					document.write("真小气");
+				}
+			}
+		</script>
+		输入你喜欢的动物:
+		<input id="mytext" type="text" value="" onfocus="thing(this)" onblur="thimg()"/>
+	</body>
+</html>
